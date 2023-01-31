@@ -1,0 +1,33 @@
+{
+  "name": "fsback",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "jest --verbose",
+    "build:ui": "rd /s build && cd ../fstackexample && npm run build && xcopy build\\* C:\\Users\\eetum\\Desktop\\FSback\\build /e/h/c/i",
+    "deploy": "fly deploy",
+    "deploy:full": "npm run build:ui && npm run deploy",
+    "logs:prod": "fly logs",
+    "open": "fly open",
+    "debug": "node --inspect index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.8.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "jest": "^29.3.1",
+    "nodemon": "^2.0.20"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
