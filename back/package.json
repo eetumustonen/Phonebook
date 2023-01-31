@@ -1,0 +1,40 @@
+{
+  "name": "fsosa3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:ui": "rd /s build && cd ../FullStack/osa2/puhelinluettelo/ && npm run build && xcopy build\\* C:\\Users\\eetum\\Desktop\\FSosa3\\build /e/h/c/i",
+    "deploy": "fly deploy",
+    "deploy:full": "npm run build:ui && npm run deploy",
+    "logs:prod": "fly logs",
+    "open": "fly open",
+    "debug": "node --inspect index.js",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eetumustonen/FSosa3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eetumustonen/FSosa3/issues"
+  },
+  "homepage": "https://github.com/eetumustonen/FSosa3#readme",
+  "dependencies": {
+    "code-formatter": "^0.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.8.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.31.0",
+    "nodemon": "^2.0.20"
+  }
+}
